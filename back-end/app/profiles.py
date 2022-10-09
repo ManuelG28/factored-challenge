@@ -17,7 +17,7 @@ profiles = make_profiles()
 
 @app.get("/", status_code=200)
 async def get_profiles():
-    return {message: "Back-end running at 0.0.0.0:80"}
+    return {"message": "Back-end running at 0.0.0.0:80"}
 
 
 @app.get("/profiles", status_code=200)
