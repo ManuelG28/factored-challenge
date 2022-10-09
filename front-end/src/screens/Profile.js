@@ -1,4 +1,3 @@
-import { Box } from "@mui/system";
 import CardProfile from "../components/cardProfile/CardProfile";
 
 const profile = {
@@ -9,18 +8,11 @@ const profile = {
 
 const Profile = () => {
   return (
-    <Box
-      display="flex"
-      alignItems="center"
-      justifyContent="center"
-      height="100vh"
-    >
-      <CardProfile
-        image={profile.image}
-        name={profile.name}
-        position={profile.position}
-      />
-    </Box>
+    <CardProfile
+      image={profile.image}
+      name={profile.name}
+      position={profile.position}
+    />
   );
 };
 
