@@ -24,8 +24,7 @@ const Login = () => {
           <Input type="password" label="Password" />
         </Grid>
       </Grid>
-      <ContainedButton color="success" url="/profile">
-        {" "}
+      <ContainedButton color="success" url="/profile/1">
         Sign in
       </ContainedButton>
     </Stack>
