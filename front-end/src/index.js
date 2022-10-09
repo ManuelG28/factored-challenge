@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./screens/App";
+import Profile from "./screens/Profile";
 import Login from "./screens/Login";
+import Skills from "./screens/Skills";
 import reportWebVitals from "./reportWebVitals";
 import {
   createBrowserRouter,
@@ -9,12 +10,14 @@ import {
   RouterProvider,
   Route,
 } from "react-router-dom";
+import { Box } from "@mui/material";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-      <Route path="/" element={<App />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/profile" element={<Profile />} />
+      <Route path="/skills" element={<Skills />} />
     </>
   )
 );
@@ -22,7 +25,14 @@ const router = createBrowserRouter(
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Box
+      display="flex"
+      alignItems="center"
+      justifyContent="center"
+      height="100vh"
+    >
+      <RouterProvider router={router} />
+    </Box>
   </React.StrictMode>
 );
 
