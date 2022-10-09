@@ -1,13 +1,10 @@
 import {
   Card,
-  CardActions,
   CardContent,
   CardMedia,
-  Grid,
   Typography,
 } from "@mui/material";
 import { Stack } from "@mui/system";
-import ContainedButton from "../button/ContainedButton";
 
 const CardProfile = ({ image, name, position }) => {
   return (
@@ -26,7 +23,6 @@ const CardProfile = ({ image, name, position }) => {
           <Typography variant="subtitle1" color="text.secondary">
             {position}
           </Typography>
-            <ContainedButton>Check skills</ContainedButton>
         </Stack>
       </CardContent>
     </Card>
