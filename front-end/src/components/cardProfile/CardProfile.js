@@ -2,7 +2,8 @@ import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 import { Stack } from "@mui/system";
 import ContainedButton from "../button/ContainedButton";
 
-const CardProfile = ({ image, name, position }) => {
+const CardProfile = (profile) => {
+  const { id, image, name, position } = profile;
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
@@ -17,7 +18,7 @@ const CardProfile = ({ image, name, position }) => {
           <Typography variant="subtitle1" color="text.secondary">
             {position}
           </Typography>
-          <ContainedButton url="/skills">Check skills</ContainedButton>
+          <ContainedButton url={`/skills/${id}`}>Check skills</ContainedButton>
         </Stack>
       </CardContent>
     </Card>

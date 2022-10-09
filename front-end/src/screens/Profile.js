@@ -1,7 +1,6 @@
 import CardProfile from "../components/cardProfile/CardProfile";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { useProfile } from "../hooks/useProfile";
 import { getProfile } from "../api/profiles";
 
 const Profile = () => {
@@ -14,13 +13,15 @@ const Profile = () => {
       return data;
     };
     fetchData().then((data) => setProfile(data));
-  });
+  }, [profileId]);
 
   return (
     <CardProfile
-      image={profile.image}
+      image={profile.picture}
       name={profile.name}
       position={profile.position}
+      skills={profile.skills}
+      id={profile.id}
     />
   );
 };
