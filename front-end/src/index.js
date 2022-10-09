@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./screens/App";
+import Profile from "./screens/Profile";
 import Login from "./screens/Login";
 import reportWebVitals from "./reportWebVitals";
 import {
@@ -13,7 +13,7 @@ import {
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-      <Route path="/" element={<App />} />
+      <Route path="/" element={<Profile />} />
       <Route path="/login" element={<Login />} />
     </>
   )

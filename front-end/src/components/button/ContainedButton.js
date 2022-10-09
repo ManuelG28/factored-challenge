@@ -1,11 +1,6 @@
 import { Button } from "@mui/material";
 
-const ContainedButton = ({
-  children,
-  size = 12,
-  color = "primary",
-  onButtonClick,
-}) => {
+const ContainedButton = ({ children, color = "primary", onButtonClick }) => {
   return (
     <Button variant="contained" color={color}>
       {children}
